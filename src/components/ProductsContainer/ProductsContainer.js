@@ -2,7 +2,7 @@ import products from "../../utils/products";
 import Product from "../Product/Product";
 import './ProductsContainer.css';
 
-function ProductsContainer(){
+function ProductsContainer({setCartItems, items, cartItems}){
     return(
         <div className="products__container">
             {
@@ -12,6 +12,9 @@ function ProductsContainer(){
                         item={item}
                         key={item.title}
                         products={products}
+                        setCartItems={setCartItems}
+                        items={items}
+                        cartItems={cartItems}
                     />
                 ))
                 :

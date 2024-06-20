@@ -10,19 +10,15 @@ import water19 from '../../images/water19.png';
 import Cart from '../Cart/Cart';
 
 function App(){
-    const items = [
-        {
-            title: "Вода Ключ Здоровья 3 литра",
-            image: water3,
-            cost: 20,
-        },
-        {
-            title: "Вода Ключ Здоровья 19 литров",
-            image: water19,
-            cost: 40,
-        },
-    ]
-    const [cartItems, setCartItems] = useState(items);
+    let items = [];
+    const [cartItems, setCartItems] = useState([]);
+    useEffect(()=>{
+        console.log(items);
+        console.log(cartItems);
+    },[items, cartItems])
+    useEffect(()=>{
+        setCartItems(items)
+    },[])
     return(
         <div className='page'>
             <Header />
@@ -31,7 +27,7 @@ function App(){
                 <Route
                     path="/"
                     element={
-                        <Main />
+                        <Main setCartItems={setCartItems} items={items} cartItems={cartItems} />
                     }
                 />
                 <Route
@@ -40,7 +36,7 @@ function App(){
                 />
                 <Route 
                     path="/cart"
-                    element={<Cart cartItems={cartItems} />}
+                    element={<Cart cartItems={cartItems} items={items} setCartItems={setCartItems} />}
                 />
             </Routes>
             </main>  

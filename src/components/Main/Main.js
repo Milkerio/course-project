@@ -2,7 +2,7 @@ import './Main.css';
 import InfoIcon from '@mui/icons-material/Info';
 import ProductsContainer from '../ProductsContainer/ProductsContainer';
 
-function Main(){
+function Main({setCartItems, items, cartItems}){
     return(
         <section className='main'>
             <div className='main__title-container'>
@@ -11,7 +11,7 @@ function Main(){
             <div className='main__info'>Минимальный размер бутыли - 3 литра.</div>
             </div>
             <div className='products'>
-                <ProductsContainer />
+                <ProductsContainer setCartItems={setCartItems} items={items} cartItems={cartItems} />
             </div>
         </section>
     )

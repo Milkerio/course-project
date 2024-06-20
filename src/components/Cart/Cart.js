@@ -1,15 +1,16 @@
 import './Cart.css';
 import { Link } from 'react-router-dom';
 import CartCard from '../CartCard/CartCard';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function Cart({cartItems}){
+function Cart({cartItems, items, setCartItems}){
     const [cost, setCost] = useState(0);
     const order = document.querySelector('.popup');
     const orderPopup = document.querySelector('.order_popup');
     const orderBtn = document.querySelector('.cart__order-button');
     const [addressText, setAddressText] = useState(localStorage.getItem('address') || '');
     const addressInput = document.querySelector('.order_popup_adress');
+    
     if(orderBtn){
         orderBtn.addEventListener('click', function(){
             order.style.visibility = 'visible';
@@ -33,8 +34,15 @@ function Cart({cartItems}){
         // Присваиваем значение переменной
         localStorage.setItem('address', address);
         setAddressText(evt.target.value);
-    }
-
+    };
+    function resetCart(){
+        console.log(items);
+        items = [];
+        console.log(items);
+        setCartItems(items);
+        console.log(cartItems);
+        
+    };
     return(
         <section className="cart">
             <h2 className="title">Корзина</h2>
@@ -60,7 +68,7 @@ function Cart({cartItems}){
                         <h3 className='cart__order-title'>Заказ</h3>
                         <div className='cart__order_cost'>
                             <p className='cart__order_cost-title'>Итого:</p>
-                            <p className='cart__order_cost-summary'>{cost}</p>
+                            <p className='cart__order_cost-summary'>{cost}р.</p>
                         </div>
                         <button className='cart__order-button' id="orderBtn">Заказать</button>
                     </div>
@@ -74,7 +82,7 @@ function Cart({cartItems}){
             {
                 cartItems && cartItems.length > 0 ?
                 <div className='cart__buttons'>
-                    <button className='cart__button_reset'>Очистить корзину</button>
+                    <button className='cart__button_reset' onClick={resetCart}>Очистить корзину</button>
                 </div>
                 :
                 <></>
