@@ -1,0 +1,20 @@
+.header__navigation-links{
+
+}
+.header__links{
+    list-style-type: none;
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    height: 21px;
+}
+.header__link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.header__link:hover{
+    opacity: .6;
+    font-size: 19px;
+}

@@ -1,0 +1,19 @@
+.footer{
+    background-color: #555555;
+    color: white;
+    font-size: 18px;
+}
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 14px;
+}
+.footer__copyright{
+    
+}
+.footer__phone{
+    
+}
+.footer__address{
+    max-width: 220px;
+}

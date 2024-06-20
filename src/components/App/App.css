@@ -1,0 +1,9 @@
+.page{
+    font-family: "Arial", sans-serif;
+    min-height: 100%;
+}
+.page-main{
+    min-height: 455px;
+    padding: 30px 12px;
+    background-color: lightblue;
+}

@@ -1,0 +1,100 @@
+.profile {
+    padding: 0;
+    background-color: lightblue;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__title {
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 45px;
+}
+
+.profile__subtitle {
+    color: #663334;
+    margin: 0;
+}
+
+.profile__subtitle_address {
+    margin-bottom: 30px;
+}
+
+.profile__content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile__form {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile__input {
+    width: 100%;
+}
+
+.profile__button {
+    border-color: #663334;
+    border-radius: 10px;
+    color: #663334;
+}
+
+.profile__button_submit {
+    width: 100%;
+}
+
+.profile__button_add-address {
+    margin-top: 30px;
+}
+
+.profile__button:hover {
+    color: #663334;
+    border-color: #663334;
+    background-color: transparent;
+}
+
+.profile__address-dialog {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    padding: 30px 0;
+}
+
+.profile__address-container {
+    width: 300px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.profile__form_add-address {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+}
+
+.profile__form-error {
+    display: none;
+}
+
+.profile__form-error_active {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .profile__content {
+        flex-direction: column;
+        row-gap: 50px;
+        align-items: center
+    }
+}

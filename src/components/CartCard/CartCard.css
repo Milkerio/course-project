@@ -1,0 +1,71 @@
+.card{
+    display: flex;
+    position: relative;
+    margin-top: 8px;
+    max-height: 110px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+.card:last-of-type{
+    margin-bottom: 0;
+    border: none;
+}
+.card__button_delete{
+    position: absolute;
+    top: 1px;
+    right: 5px;
+}
+.card__image-container{
+    margin-top: 5px;
+}
+.card__image{
+    width: 100px;
+    height: 105px;
+    object-fit: contain;
+}
+.card__info-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-top: 12px;
+}
+.card__title{
+    margin: 0;
+
+}
+.card__count-container{
+    display: flex;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px 7px;
+    max-width: max-content;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.card__count-button{
+    border: none;
+    background-color: inherit;
+    align-items: center;
+}
+.card__count-button:hover{
+    cursor: pointer;
+}
+.card__count{
+    margin: 0;
+    padding: 0 9px;
+}
+.card__button_delete{
+    color: gray;
+    background-color: white;;
+    border: none;
+}
+.card__button_delete:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+.card__cost{
+    margin: 0;
+    margin-top: 15px;
+}

@@ -1,0 +1,28 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 15px 0;
+    border: 2px solid #0e6ac6;
+    border-radius: 10px;
+    padding: 15px 0;
+}
+.product__photo{
+    max-width: 150px;
+    max-height: 150px;
+}
+.product__name{
+    font-size: 19px;
+}
+.product__cost{
+    font-size: 14px;
+}
+.product__button-buy{
+    padding: 7px;
+    background-color: rgb(221, 252, 255);
+    border-radius: 6px;
+}
+.product__button-buy:hover{
+    cursor: pointer;
+}
